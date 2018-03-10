@@ -1,4 +1,4 @@
-// vue.config.js
+// vue1.config.js
 module.exports = {
     chainWebpack: chainableConfig => {
         // modify config with webpack-chain
