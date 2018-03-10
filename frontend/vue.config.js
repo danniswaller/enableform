@@ -14,11 +14,12 @@ module.exports = {
         output: {
             publicPath: './'
         }
-    },
-    devServer: {
-        port: 8080,
-        proxy: {
-
-        },
     }
+    // ,
+    // devServer: {
+    //     port: 8080,
+    //     proxy: {
+    //
+    //     },
+    // }
 };
