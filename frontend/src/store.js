@@ -4,13 +4,18 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-
+  state: { // 状态
+    currentPage:null,
   },
-  mutations: {
-
+  mutations: { // 状态改变记录
+      ['changeCurrentPage'](state, currentPage){
+          state.currentPage = currentPage;
+      }
   },
-  actions: {
+  actions: { // 动作
+      changeCurrentPage({commit}, currentPage){
+          commit('changeCurrentPage', currentPage);
+      }
 
   }
 })
