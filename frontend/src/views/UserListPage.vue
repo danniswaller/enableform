@@ -1,5 +1,6 @@
 <template>
     <Layout class="h-full w-full">
+        <i-input></i-input>
         <Header>
             <Menu mode="horizontal" theme="dark" active-name="1">
                 <div class="layout-logo"></div>

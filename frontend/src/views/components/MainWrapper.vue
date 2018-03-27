@@ -1,0 +1,26 @@
+<template>
+  <el-container class="ef-h-full">
+    <el-header class="ef-px-0 ef-border-b-4 ef-border-black ef-pin-t">
+      <ef-top-navigation/>
+    </el-header>
+    <el-container class="ef-h-full">
+      <el-aside width="200px" class="ef-h-full ef-overflow-auto">
+        <ef-left-tree-menu class="ef-h-full"/>
+      </el-aside>
+      <el-main>
+        <div class="ef-p-2 ef-h-full ef-w-full">
+        <router-view/>
+        </div>
+      </el-main>
+    </el-container>
+  </el-container>
+</template>
+
+
+<script>
+import EfTopNavigation from "./TopNavigation";
+import EfLeftTreeMenu from "./LeftTreeMenu";
+export default {
+  components: { EfLeftTreeMenu, EfTopNavigation }
+};
+</script>

@@ -1,32 +1,32 @@
 <template>
-    <div class="flex justify-center items-center w-full h-full mt-100px">
-        <div class="w-full max-w-xs">
-            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                <div class="mb-4">
-                    <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+    <div class="ef-flex ef-justify-center ef-items-center ef-w-full ef-h-full">
+        <div class="ef-w-full ef-max-w-xs">
+            <form class="ef-bg-white ef-shadow-md ef-rounded ef-px-8 ef-pt-6 ef-pb-8 ef-mb-4">
+                <div class="ef-mb-4">
+                    <label class="ef-block ef-text-grey-darker ef-text-sm ef-font-bold ef-mb-2" for="username">
                         Username
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="username"
+                    <input class="ef-appearance-none ef-border ef-rounded ef-w-full ef-py-2 ef-px-3 ef-text-grey-darker" id="username"
                            type="text" placeholder="Username">
                 </div>
-                <div class="mb-6">
-                    <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                <div class="ef-mb-6">
+                    <label class="ef-block ef-text-grey-darker ef-text-sm ef-font-bold ef-mb-2" for="password">
                         Password
                     </label>
-                    <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
+                    <input class="ef-appearance-none ef-border ef-border-red ef-rounded ef-w-full ef-py-2 ef-px-3 ef-text-grey-darker ef-mb-3"
                            id="password" type="password" placeholder="******************">
-                    <p class="text-red text-xs italic">Please choose a password.</p>
+                    <p class="ef-text-red ef-text-xs ef-italic">Please choose a password.</p>
                 </div>
-                <div class="flex items-center justify-between">
-                    <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" type="button">
+                <div class="ef-flex ef-items-center ef-justify-between">
+                    <button class="ef-bg-blue hover:ef-bg-blue-dark ef-text-white ef-font-bold ef-py-2 ef-px-4 ef-rounded" type="button">
                         Sign In
                     </button>
-                    <a class="inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker" href="#">
+                    <a class="ef-inline-block ef-align-baseline ef-font-bold ef-text-sm ef-text-blue hover:ef-text-blue-darker" href="#">
                         Forgot Password?
                     </a>
                 </div>
             </form>
-            <p class="text-center text-grey text-xs">
+            <p class="ef-text-center ef-text-grey ef-text-xs">
                 ©2018 Acme Corp. All rights reserved.
             </p>
         </div>
@@ -36,16 +36,15 @@
 
 
 <script>
-    export default {
-        name: 'login-page',
-        data() {
-            return {};
-        },
-        computed: {},
-        methods: {}
-    };
+export default {
+  name: "login-page",
+  data() {
+    return {};
+  },
+  computed: {},
+  methods: {}
+};
 </script>
 
 <style>
-
 </style>
