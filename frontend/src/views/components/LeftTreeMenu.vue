@@ -1,6 +1,6 @@
 <template>
-  <div class="ef-bg-white ef-border-r ef-border-grey-light">
-    <el-tree :data="menuTreeData" :props="menuTreeProps" :default-expand-all="true" @node-click="handleNodeClick"></el-tree>
+  <div class="ef-bg-white ef-border-r ef-border-t ef-border-grey-light ef-rounded">
+    <el-tree class="ef-rounded" :data="menuTreeData" :props="menuTreeProps" :default-expand-all="true" @node-click="handleNodeClick"></el-tree>
   </div>
 </template>
 
