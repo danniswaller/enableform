@@ -24,7 +24,7 @@
 
 <script>
     export  default{
-        name:'tablePanel',
+        name:"ef-tablePanel",
       data(){
           return {
                 workFlowTodoStore:[{startTime:'2018-03-28',PROC_INST_ID:'12321321',sn:'XMXX001',subject:'四川邮科一期项目',proc_node_name:'财务主管',task_type:'普通',arrivalTime:'2018-03-27',proc_control:'流程监控',approveTime:''}
