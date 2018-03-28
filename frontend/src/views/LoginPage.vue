@@ -7,18 +7,18 @@
                         Username
                     </label>
                     <input class="ef-appearance-none ef-border ef-rounded ef-w-full ef-py-2 ef-px-3 ef-text-grey-darker" id="username"
-                           type="text" placeholder="Username">
+                           type="text" placeholder="Username" v-model="user.name">
                 </div>
                 <div class="ef-mb-6">
                     <label class="ef-block ef-text-grey-darker ef-text-sm ef-font-bold ef-mb-2" for="password">
                         Password
                     </label>
                     <input class="ef-appearance-none ef-border ef-border-red ef-rounded ef-w-full ef-py-2 ef-px-3 ef-text-grey-darker ef-mb-3"
-                           id="password" type="password" placeholder="******************">
+                           id="password" type="password" placeholder="******************" v-model="user.password">
                     <p class="ef-text-red ef-text-xs ef-italic">Please choose a password.</p>
                 </div>
                 <div class="ef-flex ef-items-center ef-justify-between">
-                    <button class="ef-bg-blue hover:ef-bg-blue-dark ef-text-white ef-font-bold ef-py-2 ef-px-4 ef-rounded" type="button">
+                    <button class="ef-bg-blue hover:ef-bg-blue-dark ef-text-white ef-font-bold ef-py-2 ef-px-4 ef-rounded" type="button" @click="submit(user)">
                         Sign In
                     </button>
                     <a class="ef-inline-block ef-align-baseline ef-font-bold ef-text-sm ef-text-blue hover:ef-text-blue-darker" href="#">
@@ -39,10 +39,24 @@
 export default {
   name: "login-page",
   data() {
-    return {};
+    return {user:{
+            name:'',
+            password:''
+
+    }};
   },
   computed: {},
-  methods: {}
+  methods: {
+      submit(user){
+          console.log(user);
+          if(user.name==='张聪'&&user.password==="123"){
+              this.$store.commit('increment',user);
+              this.$router.push({name:'homePage'})
+          }else{
+               alert("用户名密码错误！");
+          }
+      }
+  }
 };
 </script>
 

@@ -18,9 +18,16 @@ export default new Router({
       name: "login",
       component: LoginPage
     },
+     /* {
+          path: "/",
+          name: "loginPage",
+          component: LoginPage
+      },*/
     {
       path: "/",
+        name:'home',
       component: MainWrapper,
+        meta:{requirLogin:true},
       children: [
         {
           path: "home",

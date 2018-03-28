@@ -3,7 +3,7 @@
     <div class="ef-panel-title ef-border-b ef-border-grey-light ef-text-blue ef-pb-2" v-if="title">
       <span class="ef-font-bold">{{title}}</span>
     </div>
-    <div class="ef-panel-content ef-pt-2">
+    <div class="ef-panel-content ef-pt-0">
       <slot/>
     </div>
   </div>

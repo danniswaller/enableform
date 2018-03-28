@@ -11,7 +11,22 @@ import CustomComponents from './components';
 Vue.use(ElementUI);
 Vue.use(CustomComponents);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+router.beforeEach((to,from,next)=>{
+     if(to.meta.requirLogin){
+       // console.log(1);
+        if(store.state.user) {
+            next();
+        }else{
+          next({name:'login'})
+        }
+     }else{
+         console.log(2);
+
+         next();
+     }
+
+});
 
 new Vue({
   router,
