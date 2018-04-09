@@ -21,7 +21,7 @@ router.beforeEach((to,from,next)=>{
           next({name:'login'})
         }
      }else{
-         console.log(2);
+
 
          next();
      }

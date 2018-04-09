@@ -8,6 +8,7 @@ import ApplicationPage from "./views/ApplicationPage";
 import SystemUrlPage from "./views/SystemUrlPage";
 
 import ProjectInfoWritePage from "./views/manageSystem/tenderManage/ProjectInfoWrite";
+import  managementPage from './views/manageSystem/managePage.vue'
 
 Vue.use(Router);
 
@@ -53,6 +54,11 @@ export default new Router({
           path: "projectInfoWrite",
           name: "projectInfoWritePage",
           component: ProjectInfoWritePage
+        },
+        {
+          path: "management",
+            name: "managementPage",
+          component: managementPage
         }
       ]
     }

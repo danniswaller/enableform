@@ -7,13 +7,11 @@
         </div>
         <div class="ef-flex-1 ef-flex ef-mt-2">
             <ef-panel class="ef-flex-1" title="公司新闻">
-                <div class="ef-flex-1/3 ef-items-center ef-justify-center">
-                <div class="ef-px-4">新闻内容一</div>
-                </div>
-                <!--<ef-newsContent></ef-newsContent>-->
+                <ef-news-content></ef-news-content>
             </ef-panel>
             <ef-panel class="ef-flex-1 ef-ml-2" title="常用网址">
-                <div>content</div>
+
+              <ef-website></ef-website>
             </ef-panel>
         </div>
 
@@ -22,13 +20,26 @@
 
 <script>
     import  EfTablePanel from '../components/tablePanel.vue'
+    import  EfNewsContent from '../components/newsContent.vue'
+    import  EfWebsite  from './manageSystem/tenderManage/Website.vue'
     export default {
         name: "home-page",
 
         data() {
-            return {   colHeaders:[{colName:'startTime',viewColName:'开始时间'},{colName:'PROC_INST_ID',viewColName:'流程实例Id'},{colName:'sn',viewColName:'单号'},{colName:'subject',viewColName:'主题'},{colName:'proc_node_name',viewColName:'流程节点名称'},{colName:'task_type',viewColName:'任务类型'},{colName:'arrivalTime',viewColName:'到达时间'},{colName:'proc_control',viewColName:'流程监控'},{colName:'approveTime',viewColName:'审批时间'}]};
+            return {
+                colHeaders: [{colName: 'startTime', viewColName: '开始时间'}, {
+                    colName: 'PROC_INST_ID',
+                    viewColName: '流程实例Id'
+                }, {colName: 'sn', viewColName: '单号'}, {colName: 'subject', viewColName: '主题'}, {
+                    colName: 'proc_node_name',
+                    viewColName: '流程节点名称'
+                }, {colName: 'task_type', viewColName: '任务类型'}, {
+                    colName: 'arrivalTime',
+                    viewColName: '到达时间'
+                }, {colName: 'proc_control', viewColName: '流程监控'}, {colName: 'approveTime', viewColName: '审批时间'}]
+            };
         },
         methods: {},
-        components: {EfTablePanel}
+        components: {EfTablePanel, EfNewsContent,EfWebsite}
     };
 </script>

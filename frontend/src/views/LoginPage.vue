@@ -48,7 +48,7 @@ export default {
   computed: {},
   methods: {
       submit(user){
-          console.log(user);
+        //  console.log(user);
           if(user.name==='张聪'&&user.password==="123"){
               this.$store.commit('increment',user);
               this.$router.push({name:'homePage'})
