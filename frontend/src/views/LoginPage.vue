@@ -42,30 +42,31 @@ export default {
     return {};
   },
   computed: {
-      user(){
-         return this.$store.state.user;
-      }
+    user() {
+      return this.$store.state.user;
+    }
   },
   methods: {
-      submit(user){
-         /* console.log(this.$store.dispatch('incrementUser',user));
+    submit(user) {
+      /* console.log(this.$store.dispatch('incrementUser',user));
         if(this.$store.dispatch('incrementUser',user)){
           this.$router.push({name:'homePage'});
         }else{
             this.$router.push({name:'login'});
         }*/
-          this.$store.dispatch('incrementUser',user).then(
-                 res=>{
-                      if(res.data.success){
-                          this.$router.push({name:'homePage'});
-          }else{
-                this.$router.push({name:'login'});
-              }
-          }
-          );
-      }
+      this.$store.dispatch("incrementUser", user).then(res => {
+        if (res.data.success) {
+          this.$router.push({ name: "homePage" });
+        } else {
+          alert("用户名或密码错误")
+          // this.$router.push({ name: "login" });
+        }
+      }).catch(error=>{
+        alert("登录失败");
+      });
+    }
   }
-}
+};
 </script>
 
 <style>
