@@ -15,7 +15,9 @@ Vue.config.productionTip = false;
 router.beforeEach((to,from,next)=>{
      if(to.meta.requirLogin){
        // console.log(1);
-        if(store.state.user) {
+
+        if(store.state.user.name) {
+
             next();
         }else{
           next({name:'login'})

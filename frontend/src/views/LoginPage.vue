@@ -39,25 +39,33 @@
 export default {
   name: "login-page",
   data() {
-    return {user:{
-            name:'',
-            password:''
-
-    }};
+    return {};
   },
-  computed: {},
+  computed: {
+      user(){
+         return this.$store.state.user;
+      }
+  },
   methods: {
       submit(user){
-        //  console.log(user);
-          if(user.name==='张聪'&&user.password==="123"){
-              this.$store.commit('increment',user);
-              this.$router.push({name:'homePage'})
+         /* console.log(this.$store.dispatch('incrementUser',user));
+        if(this.$store.dispatch('incrementUser',user)){
+          this.$router.push({name:'homePage'});
+        }else{
+            this.$router.push({name:'login'});
+        }*/
+          this.$store.dispatch('incrementUser',user).then(
+                 res=>{
+                      if(res.data.success){
+                          this.$router.push({name:'homePage'});
           }else{
-               alert("用户名密码错误！");
+                this.$router.push({name:'login'});
+              }
           }
+          );
       }
   }
-};
+}
 </script>
 
 <style>

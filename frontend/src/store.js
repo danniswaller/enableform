@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-        user:{},
+        user:{name:'',password:''},
         tabItems:[],
       activeName:{},
       leftMenuData:[]
@@ -31,8 +31,8 @@ export default new Vuex.Store({
 
          axios({
              method:'get',
-             url:'/api',
-             data:''
+             url:'/api/user',
+             data:this.$store.state.user.id
          }).then(function(rep){
              console.log(rep);
          });
@@ -148,6 +148,22 @@ export default new Vuex.Store({
              }
          ];
         commit('LEFT_MENU_MUTATION',datas)
-     }
+     },
+      incrementUser({commit},user){
+     return    axios({
+               method:'get',
+              url:'/api/user/'+user.name+'/'+user.password,
+             // params:user
+          }).then(function (rep) {
+              if(rep.data.success) {
+                  commit('increment', {name: rep.data.name});
+
+              }
+         resolve(rep);
+          }).catch(function (err) {
+              console.log(err);
+          });
+
+      }
   }
 })
